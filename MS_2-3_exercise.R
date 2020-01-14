@@ -13,7 +13,9 @@ library(shiny)
 # Define UI for application that draws a histogram
 ui <- fluidPage(
     sliderInput("num2", "Number two", value = 50, min = 0, max = 100),
-    textOutput("num2")
+    textOutput("num2"),
+     sliderInput("num3", "Number two", value = 50, min = 0, max = 100),
+    textOutput("num3")
 )
 
 server <- function(input, output, session) {
