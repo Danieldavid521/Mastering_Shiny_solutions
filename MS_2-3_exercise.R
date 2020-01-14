@@ -1,27 +1,26 @@
 
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
-
 library(shiny)
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
-    sliderInput("num2", "Number two", value = 50, min = 0, max = 100),
+    sliderInput("num1", "Pick A number", value = 50, min = 0, max = 100),
+    textOutput("num1"),
+    sliderInput("num2", "Pick A number", value = 50, min = 0, max = 100),
     textOutput("num2"),
-     sliderInput("num3", "Number two", value = 50, min = 0, max = 100),
-    textOutput("num3")
+    
+    textOutput("total")
 )
 
 server <- function(input, output, session) {
-    output$num2 <- renderText({
-      paste0("Your selected input * 5 is", input$num2, "!")
+    output$num1  <- renderText({
+        paste0("Your selected input is ", input$num1, "!")
     })
+    
+    output$num2  <- renderText({
+        paste0("Your selected input is ", input$num2, "!")
+    })
+    
+    output$total <- renderText({paste0("The product of the two selected numbers is ", input$num1 * input$num2)})
 }
 
 # Run the application 
