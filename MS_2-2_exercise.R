@@ -5,7 +5,7 @@ library(shiny)
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
-    sliderInput("num2", "Number two", value = 50, min = 0, max = 100),
+    sliderInput("num2", "Pick a Number", value = 20, min = 1, max = 50),
     textOutput("num2")
 )
 
