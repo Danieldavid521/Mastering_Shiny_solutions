@@ -1,3 +1,6 @@
+
+#to keep things simple, I only generated the UI code, no server side code for now
+
 library(shiny)
 
 
