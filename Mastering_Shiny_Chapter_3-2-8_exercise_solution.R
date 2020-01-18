@@ -1,7 +1,13 @@
 library(shiny)
 
-ui <- fluidPage()
+datasets <- data(package = "ggplot2")$results[, "Item"]
 
-server <- function(input,output,session){}
+ui <- fluidPage(
+    textInput("userinput", "", placeholder = "Your name")
+    
+)
 
-shinyApp(ui=ui,server=server)
+server <- function(input, output, session) {
+    
+}
+shinyApp(ui=ui, server=server)
