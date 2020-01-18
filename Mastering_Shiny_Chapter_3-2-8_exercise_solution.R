@@ -1,6 +1,5 @@
 library(shiny)
 
-datasets <- data(package = "ggplot2")$results[, "Item"]
 
 ui <- fluidPage(
     textInput("userinput", "", placeholder = "Your name")
