@@ -1,0 +1,11 @@
+# PLEASE CORRECT ME IF I AM WRONG
+
+# Question:
+# Can the reactive graph contain a cycle? Why/why not?
+
+# Answer:
+# Yes, this is a possibility in reactive applications. "In graph theory, a cycle in a graph is a non-empty trail in which the only repeated vertices are the first and last vertices"(1).
+# An example of this is a formula that depends on 3 variables to be able to 
+# calculate a number. A Cycle is when there is an a non-empty dependency between nodes.
+
+source: 1 "https://en.wikipedia.org/wiki/Cycle_(graph_theory)"
